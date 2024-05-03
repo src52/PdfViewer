@@ -8,4 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
       - uses: gradle/actions/wrapper-validation@v3
